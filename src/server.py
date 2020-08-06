@@ -3,7 +3,7 @@ server = Flask(__name__)
 
 @server.route("/")
 def hello():
-    return "Hello World (from Flask in Python)."
+    return "Brand new text to display"
 
 if __name__ == "__main__":
-    server.run(host='0.0.0.0)
+    server.run(host='0.0.0.0')

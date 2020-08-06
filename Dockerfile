@@ -2,6 +2,7 @@
 FROM python:3.8-slim
 
 # Designate the name of the working directory in the container
+RUN mkdir /code
 WORKDIR /code
 
 # Copy the dependencies file to workdir, where workdir is represented by the .
