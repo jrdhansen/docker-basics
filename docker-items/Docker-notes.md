@@ -1,4 +1,4 @@
-DOCKER                                                                         
+# DOCKER                                                                         
 - The problem which Docker solves is to prevent the "well it worked on         
   my machine!" problem when source code is ported onto a new system (new       
   hardware, new OS, etc.)                                                      
@@ -71,4 +71,12 @@ DOCKER
     when the image is being built (creates a new layer) and CMD gives your     
     container a default command to run when the container is created and then  
     is first started.                                                          
+- < sudo docker CMD --help > allows you to see help documentation for the CMD. 
+- Volumes                                                                         
+  - Volumes allow for data to persist after a container has been destroyed.       
+  - Bind mounts are an alternative to volumes, but volumes are highly             
+    preferred over bind mounts. Bind mounts can live anywhere in the host's       
+    filesystem, while volumes live (are stored) only in the Docker area of the 
+    filesystem and are much harder to alter. (Areas where bind mounts are         
+    stored might be overwritten, accessed by other parts of the system, etc.)  
                          

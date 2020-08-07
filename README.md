@@ -1,2 +1,2 @@
 # docker-basics
-Hands-on learning of the basics of Docker
+Hands-on learning of the basics of Docker and Kubernetes
