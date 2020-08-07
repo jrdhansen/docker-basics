@@ -30,6 +30,7 @@ fails and goes down, k8s can be used to instantiate and run a replacement.
   other and pool resources of all nodes+containers so they can be used as 
   needed.
 - Worker nodes, having Docker containers running on each.
+![k8s-architecture](/images/k8s-architecture.png)
 
 ## BASIC CONCEPTS
 
@@ -45,12 +46,23 @@ fails and goes down, k8s can be used to instantiate and run a replacement.
   internal IP address. So each pod is it's own self-contained server, with pods
   communicating with each other via these internal IP's.
 - If pods get restarted or recreated, the replacement gets a new IP address. 
-  - Instead of internal IP's, can use a *Service* since they persist across
+  - Instead of internal IP's, can use a ***Service*** since they persist across
     instances of pods and makes it much easier for pods to talk to and find
     each other. Services sit in front of pods and have permanet IP addresses.
   - Services also act as load-balancers (in addition to aiding communication).
 
 ## K8S CONFIGURATION
+- All config goes thru the ***API Server*** in the master node (the cluster's
+  entrypoint.)
+- A k8s client communicates with the master node's API server. These clients
+  might include:
+  - a UI (a k8s dashboard like Rancher)
+  - an API (like a script or `curl` command)
+  - a CLI tool (like `kubectl`)
+- The k8s client must make the config requests in either `YAML` or `JSON`.
+- A ***Deployment*** is a template for creating pods (Deployment is a keyword
+  in the k8s config file). You can specify how many replicas, the image upon
+  which the pod containers are based, etc.
 
 
 
