@@ -30,7 +30,7 @@ fails and goes down, k8s can be used to instantiate and run a replacement.
   other and pool resources of all nodes+containers so they can be used as 
   needed.
 - Worker nodes, having Docker containers running on each.
-![k8s-architecture](/images/k8s-architecture.png)
+![k8s-architecture (https://www.youtube.com/watch?v=VnvRFRk_51k)](images/k8s-diagram.png)
 
 ## BASIC CONCEPTS
 
