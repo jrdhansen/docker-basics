@@ -31,7 +31,7 @@ fails and goes down, k8s can be used to instantiate and run a replacement.
   needed.
 - Worker nodes, having Docker containers running on each.
   [Image source](https://www.youtube.com/watch?v=VnvRFRk_51k)
-  [](images/k8s-diag.png)
+  ![](images/k8s-diag.png)
 
 ## BASIC CONCEPTS
 
