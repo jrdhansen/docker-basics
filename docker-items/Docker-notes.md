@@ -33,21 +33,21 @@
   Dockerfile.                                                                  
 - Terminology: a container is just a running image (was having a hard time     
   telling if there is a difference between a container and an image).          
-- NOTE: all < docker ... > commands listed below must be preceded by `\<sudo\>` in 
+- NOTE: all \< docker ... \> commands listed below must be preceded by `\<sudo\>` in 
         order to work properly unless some extra configuring has been done at  
         some point.                                                            
-- CMD = <docker build [OPTIONS] PATH | URL | - >                               
+- CMD = \<docker build [OPTIONS] PATH | URL | - \>                               
   This command builds a Docker image from a Dockerfile and a "context." A      
   build's context is the set of files in the specified PATH or URL. By default 
-  <docker build> looks for a Dockerfile at the root of the build context.      
-  example: < docker build -t myimage . > Here PATH=current dir (hence the .)   
+  \<docker build\> looks for a Dockerfile at the root of the build context.      
+  example: \< docker build -t myimage . \> Here PATH=current dir (hence the .)   
           and we specify the -t option to name the image "myimage" (we could   
           have done myimage:mytag to give the image a tag)                     
-- CMD = < docker images >   lists docker images                                
-  CMD = < docker image ls > lists docker images                                
-- CMD = < docker ps > lists docker processes                                   
-- CMD = < docker run [OPTIONS] IMAGE [COMMAND] [ARG...] >                      
-- CMD = < docker                                                               
+- CMD = \< docker images \>   lists docker images                                
+  CMD = \< docker image ls \> lists docker images                                
+- CMD = \< docker ps \> lists docker processes                                   
+- CMD = \< docker run [OPTIONS] IMAGE [COMMAND] [ARG...] \>                      
+- CMD = \< docker                                                               
 - Dockerfile                                                                   
   - [Dockerfile] ---- \<docker build...\> ----> [Docker image]                   
   - When running \<docker build\> the command by default searches for a file     
@@ -55,23 +55,23 @@
   - Keywords in a Dockerfile are referred to as instructions. Instructions     
     include FROM, RUN, CMD, ENV                                                
   - Use the FROM keyword to specify a base image.                              
-    Use <FROM scratch> to build your own image from scratch.                   
-  - <MAINTAINER> to specify name and <youremai@site.com>                   
+    Use \<FROM scratch\> to build your own image from scratch.                   
+  - \<MAINTAINER\> to specify name and \<youremai@site.com\>                   
   - If you want to run something in (think: in the CLI of) your image you      
-    say <RUN ...> like <RUN apt-get update> for example or <RUN mkdir newdir>  
+    say \<RUN ...\> like \<RUN apt-get update\> for example or \<RUN mkdir newdir\>  
     These commands get executed once at build time and get written into your   
     Docker image as a new layer.                                               
     - The layers of a Docker image are files generated from running a cmd.     
     - Layers can be reused by multiple images.                                 
     - A container is an image with a readable/writeable layer on top of a      
       bunch of read-only layers.                                               
-  - Use the <CMD> instruction to run a command (think on the CLI of the        
+  - Use the \<CMD\> instruction to run a command (think on the CLI of the        
     container) AFTER the container/image has been created.                     
   - The difference between RUN and CMD is that RUN commands get executed once  
     when the image is being built (creates a new layer) and CMD gives your     
     container a default command to run when the container is created and then  
     is first started.                                                          
-- < sudo docker CMD --help > allows you to see help documentation for the CMD. 
+- \< sudo docker CMD --help \> allows you to see help documentation for the CMD. 
 - Volumes                                                                         
   - Volumes allow for data to persist after a container has been destroyed.       
   - Bind mounts are an alternative to volumes, but volumes are highly             
