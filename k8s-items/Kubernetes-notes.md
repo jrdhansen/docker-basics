@@ -1,4 +1,4 @@
-# KUBERNETES
+# KUBERNETES: container orchestration
 Kubernetes (k8s) is a framework for managing distributed systems. In particular,
 k8s is used to manage containerized applications. For example, if a container
 fails and goes down, k8s can be used to instantiate and run a replacement.
@@ -65,6 +65,24 @@ fails and goes down, k8s can be used to instantiate and run a replacement.
   in the k8s config file). You can specify how many replicas, the image upon
   which the pod containers are based, etc.
 
+## K8S EXAMPLE
+Using a locally-installed version of k8s essentially defeats the purpose of k8s
+(since none of the benefits of cloud computing with multiple connected 
+machines can be realized). However, for the sake of learning I figured it would
+be helpful. The `Minikube` tool seems to be a good choice for this. I've 
+elected to work through [this tutorial](https://www.youtube.com/playlist?list=PLot-YkcC7wZ9xwMzkzR_EkOrPahSofe5Q).
+- First, install a hypervisor. I'm  using a Linux machine, so I'll elect for
+  VirtualBox.
+- Some terminology:
+  - ***Deployment***: a high-level concept, like an application (I'd
+    think of it as being an all-encompassing collection of k8s items which end
+    up producing your final product or application).
+  - ***Pods***: we already know, pods are running instances of a container image.
+  - ***Services***: endpoints that expose ports to the rest of the world, make
+    the app usable by end consumers.
+  - Will create, delete, modify, etc. these things using `kubectl` (CLI tool 
+    for managing k8s items).
+- Install `kubectl` package.
 
 
 

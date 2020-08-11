@@ -33,7 +33,7 @@
   Dockerfile.                                                                  
 - Terminology: a container is just a running image (was having a hard time     
   telling if there is a difference between a container and an image).          
-- NOTE: all < docker ... > commands listed below must be preceded by <sudo> in 
+- NOTE: all < docker ... > commands listed below must be preceded by `\<sudo\>` in 
         order to work properly unless some extra configuring has been done at  
         some point.                                                            
 - CMD = <docker build [OPTIONS] PATH | URL | - >                               
@@ -49,8 +49,8 @@
 - CMD = < docker run [OPTIONS] IMAGE [COMMAND] [ARG...] >                      
 - CMD = < docker                                                               
 - Dockerfile                                                                   
-  - [Dockerfile] ---- <docker build...> ----> [Docker image]                   
-  - When running <docker build> the command by default searches for a file     
+  - [Dockerfile] ---- \<docker build...\> ----> [Docker image]                   
+  - When running \<docker build\> the command by default searches for a file     
     named Dockerfile.                                                          
   - Keywords in a Dockerfile are referred to as instructions. Instructions     
     include FROM, RUN, CMD, ENV                                                
